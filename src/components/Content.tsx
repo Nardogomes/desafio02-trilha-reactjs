@@ -1,9 +1,5 @@
 import { MovieCard } from "./MovieCard";
 
-interface ContentProps {
-  titleSelected: string;
-}
-
 interface MovieProps {
   imdbID: string;
   Title: string;
@@ -15,7 +11,12 @@ interface MovieProps {
   Runtime: string;
 }
 
-export function Content({ titleSelected }: ContentProps, filmes: MovieProps[]) {
+interface ContentProps {
+  titleSelected: string;
+  filmes: MovieProps[];
+}
+
+export function Content({ titleSelected, filmes }: ContentProps) {
   return (
     <div className="container">
       <header>
