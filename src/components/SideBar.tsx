@@ -9,12 +9,14 @@ interface GenreResponseProps {
 interface SideBarProps {
   selectedGenreId: number;
   onClickButton: (id: number) => void;
+  generos: GenreResponseProps[];
 }
 
-export function SideBar(
-  { selectedGenreId, onClickButton }: SideBarProps,
-  generos: GenreResponseProps[]
-) {
+export function SideBar({
+  selectedGenreId,
+  generos,
+  onClickButton,
+}: SideBarProps) {
   return (
     <nav className="sidebar">
       <span>
